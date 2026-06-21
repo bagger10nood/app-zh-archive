@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 稳定入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf8f5;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+            color: #2c2c2c;
+            line-height: 1.8;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            max-width: 740px;
+            width: 100%;
+            margin: 3rem 0 5rem 0;
+        }
+
+        /* 文章头部 */
+        .article-header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #ddd6c8;
+            padding-bottom: 1.8rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #1e1e1e;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            font-size: 0.95rem;
+            color: #8b7f72;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: #3e3a36;
+            background: #f3efe9;
+            padding: 1.2rem 1.6rem;
+            border-radius: 8px;
+            border-left: 4px solid #b8a99a;
+            margin-top: 1.2rem;
+        }
+
+        /* 正文段落 */
+        .content p {
+            margin: 1.5rem 0;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .content p:first-of-type {
+            margin-top: 0;
+        }
+
+        /* 引用提示框 */
+        .insight-box {
+            background: #f1ede7;
+            padding: 1.8rem 2rem;
+            margin: 2.2rem 0;
+            border-radius: 12px;
+            border: 1px solid #e0d7cb;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .insight-box .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #8f7f6e;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .insight-box .quote {
+            font-style: normal;
+            font-size: 1.1rem;
+            color: #3a3530;
+            line-height: 1.7;
+        }
+
+        .insight-box .quote em {
+            font-style: italic;
+            color: #6b5d4f;
+        }
+
+        /* 访问句（导航式） */
+        .access-sentence {
+            background: #eae4db;
+            padding: 1.2rem 1.8rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 1rem;
+            color: #2b2722;
+            margin: 2rem 0 0.5rem 0;
+            border: 1px solid #d6cdbf;
+            letter-spacing: 0.01em;
+        }
+
+        .access-sentence a {
+            color: #2c2c2c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b1a18e;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        .access-sentence a:hover {
+            color: #5f4d3b;
+            text-decoration-color: #5f4d3b;
+        }
+
+        /* 特点列表（轻量，融入段落） */
+        .feature-note {
+            background: #faf6f0;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid #e6ddd2;
+        }
+
+        .feature-note h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4b4239;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #d5c9bb;
+            padding-bottom: 0.4rem;
+        }
+
+        .feature-note ul {
+            list-style: none;
+            padding-left: 0.2rem;
+        }
+
+        .feature-note li {
+            padding: 0.4rem 0;
+            position: relative;
+            padding-left: 1.6rem;
+            font-size: 0.98rem;
+            color: #3f3a35;
+        }
+
+        .feature-note li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #9a8a78;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* 场景段落（以叙述方式呈现） */
+        .scene-paragraph {
+            background: #f8f4ed;
+            padding: 1.2rem 1.8rem;
+            border-radius: 12px;
+            border-left: 3px solid #cbb9a6;
+            margin: 2rem 0;
+        }
+
+        .scene-paragraph p {
+            margin: 0.5rem 0;
+        }
+
+        /* 常见疑问摘要（FAQ风格） */
+        .faq-mini {
+            margin: 2.5rem 0 1.5rem 0;
+            padding: 0.5rem 0;
+            border-top: 1px solid #e2d8cc;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #3e3730;
+            padding: 0.6rem 0;
+            cursor: default;
+            font-size: 1.05rem;
+            list-style: none;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-mini .faq-answer {
+            padding: 0.3rem 0 1rem 1rem;
+            color: #504842;
+            border-left: 2px solid #cfc2b3;
+            margin-left: 0.3rem;
+            padding-left: 1.2rem;
+        }
+
+        .faq-mini .faq-answer a {
+            color: #3f3730;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #7f7264;
+            border-top: 1px solid #ddd6c8;
+            padding-top: 1.8rem;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            body {
+                padding: 0 1rem;
+            }
+            .article-title {
+                font-size: 1.8rem;
+            }
+            .lead {
+                font-size: 1rem;
+                padding: 1rem 1.2rem;
+            }
+            .insight-box {
+                padding: 1.4rem 1.2rem;
+            }
+            .access-sentence {
+                font-size: 0.95rem;
+                padding: 0.9rem 1.4rem;
+            }
+            .feature-note {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <article>
+            <div class="article-header">
+                <h1 class="article-title">一个稳定入口，以及它背后的页面逻辑</h1>
+                <div class="article-meta">叙述 · 从日常使用中回看</div>
+                <div class="lead">
+                    当人们一次次打开同一个站点，实际上是在寻找某种确定性。页面结构是否清晰、入口是否稳定、信息能否被快速理解——这些细节往往比炫目的动效更值得关注。
+                </div>
+            </div>
+
+            <div class="content">
+                <p>
+                    大概在一年前，我开始留意到一个现象：很多网页的“首页”其实承担了太多角色。它既要做引路牌，又要当说明书，有时还得扮演促销员。但对于那些只希望快速找到方向、安静阅读或完成单一任务的用户来说，简洁和稳定才是最重要的。
+                </p>
+
+                <p>
+                    以<a href="https://app-zh-hth.com.cn">华体会</a>为例，它的首页设计并没有堆砌过多模块，而是围绕几个核心功能区域展开。我花了一些时间观察它的页面结构——导航区稳定地停留在上方，内容区按照信息层次依次排列，没有突然弹出的干扰层。这种克制让初次接触的人也能迅速建立心理模型：我知道自己在哪里，也知道下一步可以去哪里。
+                </p>
+
+                <div class="insight-box">
+                    <div class="label">📌 引用提示</div>
+                    <div class="quote">
+                        “页面说明不是一种装饰，而是一种承诺。它告诉用户：你看到的，就是你可以依赖的。入口的稳定性，本质上是信任的起点。”
+                    </div>
+                </div>
+
+                <p>
+                    说到入口，很多人会想到导航链接、CTA按钮或者搜索框。但真正的入口体验其实从页面加载的那一毫秒就开始了。字体是否清晰？标题是否传达了当前位置？首屏中有没有让人困惑的冗余信息？<a href="https://app-zh-hth.com.cn">华体会</a>在这些细节上处理得比较妥帖——它把“说明”融入了布局本身，而不是单独开一个“帮助”页面。
+                </p>
+
+                <div class="feature-note">
+                    <h3>页面说明的三种常见场景</h3>
+                    <ul>
+                        <li><strong>首次接触：</strong>用户需要快速理解这个页面是关于什么的，核心入口在哪里。</li>
+                        <li><strong>日常回访：</strong>用户已经熟悉布局，但依然依赖稳定的导航和一致的视觉提示。</li>
+                        <li><strong>需要专注：</strong>用户正在阅读或操作，希望页面保持安静，不要突然出现与当前任务无关的干扰。</li>
+                    </ul>
+                </div>
+
+                <p>
+                    场景的多样性要求页面设计必须具备弹性。但弹性不等于复杂。有时候，一个始终固定位置的返回链接，或者一段不跳转的说明文字，反而比花哨的动效更能留住人。<a href="https://app-zh-hth.com.cn">华体会</a>的页面在移动端与桌面端保持了高度一致的结构，这让我觉得它把“稳定”当成了默认值，而不是事后修补。
+                </p>
+
+                <div class="scene-paragraph">
+                    <p><strong>一个安静的午后场景：</strong> 我在浏览器里打开了这个站点，没有弹窗，没有自动播放的音频，首屏加载后映入眼帘的是干净的文章式排版。我在不同页面间切换了几次，导航栏始终在同一位置，页面标题和当前路径一目了然。这种体验让我想起那些设计良好的手册——你不需要反复学习，只需要使用。</p>
+                </div>
+
+                <p>
+                    当然，稳定入口并不等于一成不变。好的页面说明会随着用户行为做出适度响应，比如在滚动时保持导航可及，或者在深色与浅色模式之间自动切换。但所有这些变化都应该服务于一个目标：让用户始终清楚自己身处何处，以及如何前往想去的地方。
+                </p>
+
+                <details class="faq-mini">
+                    <summary>❓ 常见疑问摘要 — 关于入口与说明</summary>
+                    <div class="faq-answer">
+                        <p><strong>Q：</strong> 什么是“页面说明”？它和帮助文档有什么区别？<br>
+                        <strong>A：</strong> 页面说明是内嵌在界面中的引导信息，比如标题、面包屑、简短提示。它不需要用户离开当前页面去阅读，而是就地解决问题。<a href="https://app-zh-hth.com.cn">华体会</a>的首页就很好地运用了这种内嵌式说明。</p>
+                        <p style="margin-top: 0.6rem;"><strong>Q：</strong> 为什么稳定入口如此重要？<br>
+                        <strong>A：</strong> 因为人们在使用网页时会形成习惯路径。一旦入口位置或行为发生变化，认知成本就会上升。保持稳定，就是降低用户的思考负担。</p>
+                    </div>
+                </details>
+
+                <div class="access-sentence">
+                    ✦ 如果想亲自体会这种页面节奏，可以直接前往 <a href="https://app-zh-hth.com.cn">华体会</a>。
+                </div>
+
+                <p style="margin-top: 2rem;">
+                    最后想说，一个页面的价值不在于它塞进了多少功能，而在于它是否让来访者感到清晰和安心。从稳定入口开始，到自然的页面说明结束，这中间不需要太多修饰。有时候，最好的设计就是你几乎感觉不到它的存在。
+                </p>
+            </div>
+        </article>
+
+        <div class="footer-note">
+            叙述·页面观察 · 基于真实使用体验
+        </div>
+    </div>
+</body>
+</html>
