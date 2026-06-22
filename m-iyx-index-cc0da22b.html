@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 再次遇见你</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f3f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e4f;
+            line-height: 1.7;
+            padding: 24px 16px;
+        }
+
+        .wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            background: transparent;
+        }
+
+        /* ---- 顶部导航 ---- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 12px 28px;
+            border-radius: 28px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #e6e8ec;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            color: #1f2a36;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #4a5b6b;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .nav-links li a:hover {
+            border-bottom-color: #7b8e9f;
+            color: #1f2a36;
+        }
+
+        /* ---- 主内容卡片 ---- */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 36px 32px;
+            margin-bottom: 28px;
+            border: 1px solid #e6e8ec;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 18px;
+            color: #1f2a36;
+            border-left: 4px solid #7b8e9f;
+            padding-left: 16px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #2c3e4f;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #3d4f5e;
+        }
+
+        a {
+            color: #2c5f7c;
+            text-decoration: underline;
+            text-decoration-color: #cbd5de;
+            text-underline-offset: 4px;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #1a3a4f;
+            text-decoration-color: #7b8e9f;
+        }
+
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .scene-item {
+            background: #f8f9fb;
+            border-radius: 20px;
+            padding: 24px 18px;
+            border: 1px solid #e6e8ec;
+        }
+
+        .scene-item p {
+            font-size: 0.95rem;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #1f2a36;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 24px 0 8px;
+            color: #7b8e9f;
+            font-size: 0.9rem;
+            border-top: 1px solid #e6e8ec;
+            margin-top: 20px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 700px) {
+            .top-nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px 20px;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .scene-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .card {
+                padding: 28px 20px;
+            }
+
+            body {
+                padding: 16px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scene-item {
+                padding: 18px 14px;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- 导航 -->
+    <nav class="top-nav">
+        <div class="logo">
+            <a href="https://m-iyx.com">爱游戏</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">重访</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">持续关注</a></li>
+            <li><a href="#">说明</a></li>
+        </ul>
+    </nav>
+
+    <!-- 核心介绍 -->
+    <div class="card">
+        <p>有些地方，第一次去是好奇，第二次去是习惯，第三次去就成了惦念。<a href="https://m-iyx.com">爱游戏</a>于我而言，便是这样一个去处——不是因为它有多喧闹，而是每次回来，都能找到熟悉的角落和新的想法。</p>
+        <p>现在无论是打开浏览器的书签，还是直接输入那一串早已记住的地址，都像推开一扇虚掩的门。门里没有推送的喧哗，只有持续更新的内容，和一种不紧不慢的陪伴。我不需要记住每个栏目，因为常看的几个入口已经长在手边。</p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="card">
+        <h2>一些回来的时刻</h2>
+        <div class="scene-grid">
+            <div class="scene-item">
+                <h3>再次访问</h3>
+                <p>有时隔了两周，有时隔了两个月。再回来时，页面布局还是那个样子，但内容已经有了变化。像是翻一本经常更新的杂志，每期都有熟悉的版式，但文章总有些新的观点。</p>
+            </div>
+            <div class="scene-item">
+                <h3>收藏之后</h3>
+                <p>我把它放进了浏览器的收藏夹，文件夹名字就叫「日常」。不是那种一藏不再看的收藏，而是每隔一段时间就会点开的那种。收藏夹里的位置很稳定，从来不担心找不到。</p>
+            </div>
+            <div class="scene-item">
+                <h3>持续关注</h3>
+                <p>关注一个地方久了，会慢慢察觉它的节奏。有时是深夜更新，有时是周末。我不需要时刻盯着，只是偶尔想起，就知道该回去看看了。这种默契，比推送通知更让人自在。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <div class="card">
+        <h2>一些常见的问题</h2>
+        <div class="faq-item">
+            <strong>打开的页面和以前一样吗？</strong>
+            <p>核心结构保持一致，方便你快速定位。但内容会定期调整，有些板块会更新，有些则延续原有的风格。如果你隔了一段时间没来，不妨多翻几页。</p>
+        </div>
+        <div class="faq-item">
+            <strong>需要注册或登录才能看吗？</strong>
+            <p>大部分内容可以直接浏览，不需要繁琐的注册流程。只有少数互动功能可能需要简单的身份识别，但绝不是访问的门槛。</p>
+        </div>
+        <div class="faq-item">
+            <strong>有没有移动端的版本？</strong>
+            <p>目前直接通过手机浏览器访问就能获得不错的显示效果，页面会根据屏幕大小自动调整排版。如果你习惯用电脑，当然体验更完整。</p>
+        </div>
+        <p class="faq-item" style="margin-bottom: 0;">—— 其实很多问题，只要亲自回来看看，就都有了答案。<a href="https://m-iyx.com">爱游戏</a>一直在这里，不增不减。</p>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        — 偶尔回来，刚刚好 —
+    </div>
+
+</div>
+</body>
+</html>
